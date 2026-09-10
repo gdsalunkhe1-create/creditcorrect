@@ -728,7 +728,10 @@
   padding: 40px 0;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
-  background: var(--paper-raised);
+}
+
+.page > section:nth-of-type(even) {
+  background: var(--paper-tint);
 }
 
 .trust-grid {
