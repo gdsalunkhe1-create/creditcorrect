@@ -293,17 +293,17 @@ export default function App() {
           </div>
           <ReportCardVisual />
         </div>
-        <div className="wrap">
-          <div className="trust-bar">
-            {TRUST_POINTS.map((t) => (
-              <div className="trust-point" key={t.label}>
-                <t.icon size={17} strokeWidth={1.75} />
-                <span>{t.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </header>
+      <div className="wrap">
+        <div className="trust-bar">
+          {TRUST_POINTS.map((t) => (
+            <div className="trust-point" key={t.label}>
+              <t.icon size={17} strokeWidth={1.75} />
+              <span>{t.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
       <section className="section" id="errors">
         <div className="wrap">

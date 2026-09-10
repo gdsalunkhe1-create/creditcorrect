@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f4f6f9;
+  background: radial-gradient(ellipse 900px 600px at 50% 0%, #1a2c4a 0%, var(--ink-deep, #0a1220) 55%, #0a1220 100%);
 }
 
 .gate-box {
@@ -51,7 +51,8 @@
 /* ── Page shell ─────────────────────────────────────────── */
 .internal-page {
   min-height: 100vh;
-  background: #f4f6f9;
+  background: #f6f7fa;
+  background-image: radial-gradient(ellipse 1200px 400px at 50% 0%, rgba(15, 28, 48, 0.05), transparent 70%);
   font-family: var(--sans);
   color: #101828;
 }
@@ -61,7 +62,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
-  background: #101828;
+  background: linear-gradient(120deg, #0f1c30, #16283f);
   color: #f4f6f9;
 }
 

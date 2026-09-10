@@ -13,9 +13,9 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(247, 244, 236, 0.92);
+  background: rgba(15, 28, 48, 0.92);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-inner {
@@ -32,10 +32,11 @@
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.01em;
+  color: #f6f3ea;
 }
 
 .brand-mark {
-  color: var(--amber-deep);
+  color: var(--amber-bright);
 }
 
 .nav-links {
@@ -45,13 +46,13 @@
 
 .nav-links a {
   font-size: 0.92rem;
-  color: var(--ink-soft);
+  color: #c3cbdb;
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
 .nav-links a:hover {
-  color: var(--ink);
+  color: #fff;
 }
 
 @media (max-width: 760px) {
@@ -64,25 +65,40 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--ink);
-  color: var(--paper-raised);
+  background: var(--amber-bright);
+  color: #241705;
   border: none;
   padding: 10px 18px;
   border-radius: 6px;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   text-decoration: none;
   transition: background 0.15s ease;
 }
 
 .nav-cta:hover {
-  background: var(--ink-soft);
+  background: #eebd6d;
 }
 
 /* ── Hero ──────────────────────────────────────────────── */
 .hero {
-  padding: 72px 0 88px;
+  padding: 72px 0 0;
+  background: radial-gradient(ellipse 900px 500px at 20% 0%, #1a2c4a 0%, var(--ink-deep) 60%);
+  color: #f0eee6;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  background: linear-gradient(to bottom, transparent, var(--paper));
+  pointer-events: none;
 }
 
 .hero-grid {
@@ -90,10 +106,12 @@
   grid-template-columns: 1.1fr 0.9fr;
   gap: 56px;
   align-items: center;
+  padding-bottom: 56px;
+  position: relative;
 }
 
 .hero-eyebrow-line {
-  color: var(--slate);
+  color: #a9b4c8;
   font-size: 0.95rem;
   margin-bottom: 18px;
 }
@@ -101,12 +119,13 @@
 .hero h1 {
   font-size: clamp(2.1rem, 4vw, 3rem);
   max-width: 15ch;
+  color: #fbfaf7;
 }
 
 .hero-sub {
   margin-top: 20px;
   font-size: 1.1rem;
-  color: var(--ink-soft);
+  color: #c3cbdb;
   max-width: 46ch;
   line-height: 1.6;
 }
@@ -116,6 +135,15 @@
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+}
+
+.hero .btn-secondary {
+  color: #f0eee6;
+  border-color: rgba(240, 238, 230, 0.45);
+}
+
+.hero .btn-secondary:hover {
+  background: rgba(240, 238, 230, 0.08);
 }
 
 .btn-primary {
@@ -171,8 +199,7 @@
 
 /* ── Trust bar ─────────────────────────────────────────── */
 .trust-bar {
-  margin-top: 48px;
-  padding-top: 28px;
+  padding: 28px 0 0;
   border-top: 1px solid var(--rule);
   display: flex;
   flex-wrap: wrap;
